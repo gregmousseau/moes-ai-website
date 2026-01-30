@@ -1,17 +1,398 @@
 ---
-
+// Moes.ai Marketing Website
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Moes.ai - Deploy AI agents that handle customer support, sales, and operations across Slack, email, WhatsApp, and more—in minutes, not months." />
+    <title>Moes.ai - AI agents that just work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-navy text-text-primary font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/80 backdrop-blur-lg border-b border-border/50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold">
+          moes<span class="text-violet">.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-text-secondary hover:text-text-primary transition-colors">Features</a>
+          <a href="#how-it-works" class="text-text-secondary hover:text-text-primary transition-colors">How it works</a>
+          <a href="#pricing" class="text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+        </div>
+        <a href="#waitlist" class="bg-violet hover:bg-violet-light text-white px-5 py-2 rounded-lg font-medium transition-colors">
+          Join Waitlist
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="max-w-3xl">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            AI agents that<br />
+            <span class="text-violet">just work.</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-text-secondary mb-10 max-w-2xl">
+            Deploy AI agents that handle customer support, sales, and operations across Slack, email, WhatsApp, and more—in minutes, not months.
+          </p>
+          <form id="hero-form" class="flex flex-col sm:flex-row gap-4 max-w-lg">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              required
+              class="flex-1 px-5 py-4 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-violet focus:ring-1 focus:ring-violet transition-colors"
+            />
+            <button 
+              type="submit"
+              class="bg-violet hover:bg-violet-light text-white px-8 py-4 rounded-lg font-semibold transition-colors whitespace-nowrap"
+            >
+              Get Early Access
+            </button>
+          </form>
+          <p class="text-text-muted text-sm mt-4">No spam. We'll notify you when we launch.</p>
+        </div>
+        
+        <!-- Hero visual accent -->
+        <div class="absolute top-1/2 right-0 w-1/2 h-1/2 bg-gradient-to-l from-violet/20 to-transparent blur-3xl -z-10"></div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-surface/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Everything you need</h2>
+          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+            Build, deploy, and manage AI agents without writing a single line of code.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
+            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Visual Agent Builder</h3>
+            <p class="text-text-secondary text-lg">
+              Drag-and-drop interface to design your agent's behavior. Define triggers, responses, and workflows visually.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
+            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Multi-Channel</h3>
+            <p class="text-text-secondary text-lg">
+              One agent, everywhere. Deploy seamlessly to Slack, Discord, WhatsApp, Email, and custom web widgets.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
+            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Knowledge Base</h3>
+            <p class="text-text-secondary text-lg">
+              Upload docs, FAQs, and training data. Your agent learns your business and answers accurately.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
+            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Analytics Dashboard</h3>
+            <p class="text-text-secondary text-lg">
+              Track conversations, response quality, and user satisfaction. Know exactly how your agents perform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Get started in minutes</h2>
+          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+            No coding required. No consultants needed.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Create your agent</h3>
+            <p class="text-text-secondary text-lg">
+              Define your agent's personality, upload your knowledge base, and set its capabilities.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Connect channels</h3>
+            <p class="text-text-secondary text-lg">
+              Link your Slack workspace, Discord server, WhatsApp, or email—all in a few clicks.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Go live</h3>
+            <p class="text-text-secondary text-lg">
+              Hit deploy. Your AI agent starts handling conversations instantly. Monitor and refine as you go.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-surface/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple, transparent pricing</h2>
+          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+            Start free. Scale when you're ready.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <!-- Free -->
+          <div class="bg-surface border border-border rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-2">Free</h3>
+            <p class="text-text-muted mb-6">Self-hosted</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$0</span>
+              <span class="text-text-muted">/forever</span>
+            </div>
+            <ul class="space-y-3 text-text-secondary mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Unlimited agents
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Your infrastructure
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Community support
+              </li>
+            </ul>
+            <a href="https://github.com/moes-ai" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
+              View on GitHub
+            </a>
+          </div>
+
+          <!-- Starter -->
+          <div class="bg-surface border border-border rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-2">Starter</h3>
+            <p class="text-text-muted mb-6">For small teams</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$49</span>
+              <span class="text-text-muted">/month</span>
+            </div>
+            <ul class="space-y-3 text-text-secondary mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                3 agents
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                5,000 messages/mo
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Email support
+              </li>
+            </ul>
+            <a href="#waitlist" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
+              Join Waitlist
+            </a>
+          </div>
+
+          <!-- Pro (Popular) -->
+          <div class="bg-surface border-2 border-violet rounded-2xl p-8 relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet px-4 py-1 rounded-full text-sm font-medium">
+              Popular
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Pro</h3>
+            <p class="text-text-muted mb-6">For growing teams</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$149</span>
+              <span class="text-text-muted">/month</span>
+            </div>
+            <ul class="space-y-3 text-text-secondary mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                10 agents
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                25,000 messages/mo
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Priority support
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Advanced analytics
+              </li>
+            </ul>
+            <a href="#waitlist" class="block text-center py-3 bg-violet hover:bg-violet-light rounded-lg font-medium transition-colors">
+              Join Waitlist
+            </a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="bg-surface border border-border rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+            <p class="text-text-muted mb-6">Custom solutions</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">Custom</span>
+            </div>
+            <ul class="space-y-3 text-text-secondary mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Unlimited agents
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Unlimited messages
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Dedicated support
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                SLA & compliance
+              </li>
+            </ul>
+            <a href="mailto:hello@moes.ai" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
+              Contact Sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="waitlist" class="py-24">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to deploy AI agents?</h2>
+        <p class="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">
+          Join the waitlist and be first to know when we launch. Early access members get exclusive benefits.
+        </p>
+        <form id="cta-form" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            required
+            class="flex-1 px-5 py-4 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-violet focus:ring-1 focus:ring-violet transition-colors"
+          />
+          <button 
+            type="submit"
+            class="bg-violet hover:bg-violet-light text-white px-8 py-4 rounded-lg font-semibold transition-colors whitespace-nowrap"
+          >
+            Join Waitlist
+          </button>
+        </form>
+        <p class="text-text-muted text-sm mt-4">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-border py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="/" class="text-2xl font-bold">
+              moes<span class="text-violet">.ai</span>
+            </a>
+            <p class="text-text-secondary mt-4">
+              AI agents that just work.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Product</h4>
+            <ul class="space-y-2 text-text-secondary">
+              <li><a href="#features" class="hover:text-text-primary transition-colors">Features</a></li>
+              <li><a href="#pricing" class="hover:text-text-primary transition-colors">Pricing</a></li>
+              <li><a href="#" class="hover:text-text-primary transition-colors">Documentation</a></li>
+              <li><a href="#" class="hover:text-text-primary transition-colors">Changelog</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-text-secondary">
+              <li><a href="#" class="hover:text-text-primary transition-colors">About</a></li>
+              <li><a href="#" class="hover:text-text-primary transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-text-primary transition-colors">Careers</a></li>
+              <li><a href="mailto:hello@moes.ai" class="hover:text-text-primary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2 text-text-secondary">
+              <li><a href="#" class="hover:text-text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-text-primary transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border">
+          <p class="text-text-muted text-sm">
+            © 2025 Moes.ai. A Canadian company 🇨🇦
+          </p>
+          <div class="flex items-center gap-4 mt-4 md:mt-0">
+            <a href="https://twitter.com/moesai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://github.com/moes-ai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="https://linkedin.com/company/moes-ai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

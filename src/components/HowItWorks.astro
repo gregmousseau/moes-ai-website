@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Create your agent',
+    description: 'Use our visual builder to define your agent\'s personality, knowledge, and capabilities. Upload docs, set the tone, and configure behaviors.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+    </svg>`
+  },
+  {
+    number: '02',
+    title: 'Connect channels',
+    description: 'Link your agent to Slack, Discord, WhatsApp, email, or embed on your website. One-click integrations, no API keys to manage.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+    </svg>`
+  },
+  {
+    number: '03',
+    title: 'Go live',
+    description: 'Your agent is live and learning. Monitor conversations, refine responses, and scale effortlessly as your needs grow.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>`
+  }
+];
+---
+
+<section id="how-it-works" class="py-20 md:py-32 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        From zero to AI-powered in <span class="text-violet-400">3 steps</span>
+      </h2>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        No machine learning expertise required. No complex setup. Just results.
+      </p>
+    </div>
+    
+    <!-- Steps -->
+    <div class="relative">
+      <!-- Connection line -->
+      <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-violet-500/30 to-transparent -translate-y-1/2"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+        {steps.map((step, index) => (
+          <div class="relative">
+            <div class="bg-[#0f0f1a] border border-slate-700/50 rounded-2xl p-8 h-full hover:border-violet-500/30 transition-colors">
+              <!-- Step number -->
+              <div class="flex items-center gap-4 mb-6">
+                <span class="text-5xl font-bold text-violet-500/20">{step.number}</span>
+                <div class="w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center text-violet-400">
+                  <Fragment set:html={step.icon} />
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-semibold text-white mb-3">{step.title}</h3>
+              <p class="text-slate-400 leading-relaxed">{step.description}</p>
+            </div>
+            
+            <!-- Arrow for mobile -->
+            {index < steps.length - 1 && (
+              <div class="lg:hidden flex justify-center my-4">
+                <svg class="w-6 h-6 text-violet-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Time callout -->
+    <div class="mt-16 text-center">
+      <div class="inline-flex items-center gap-3 px-6 py-3 bg-violet-500/10 border border-violet-500/20 rounded-full">
+        <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="text-violet-300 font-medium">Average setup time: <span class="text-white">under 10 minutes</span></span>
+      </div>
+    </div>
+  </div>
+</section>
