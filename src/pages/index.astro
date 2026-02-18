@@ -1,5 +1,5 @@
 ---
-// Moes.ai Marketing Website
+// Moes.ai Marketing Website — Complete Redesign
 import '../styles/global.css';
 ---
 
@@ -8,387 +8,694 @@ import '../styles/global.css';
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Moes.ai - Deploy AI agents that handle customer support, sales, and operations across Slack, email, WhatsApp, and more—in minutes, not months." />
-    <title>Moes.ai - AI agents that just work</title>
+    <meta name="description" content="Moes.ai — A personal AI assistant that remembers you, lives in your messaging apps, and actually does things. Hosted for you, set up in 5 minutes." />
+    <title>Moes.ai — Your AI Assistant, Hosted for You</title>
+    <meta property="og:title" content="Moes.ai — Your AI Assistant, Hosted for You" />
+    <meta property="og:description" content="A personal AI that remembers you, lives in your messaging apps, and actually does things — email, calendar, research, reminders." />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-navy text-text-primary font-sans antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/80 backdrop-blur-lg border-b border-border/50">
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-navy/80 backdrop-blur-lg border-b border-transparent transition-all duration-300">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold">
-          moes<span class="text-violet">.ai</span>
+        <a href="/" class="text-2xl font-bold font-heading">
+          moes<span class="text-blue">.ai</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="text-text-secondary hover:text-text-primary transition-colors">Features</a>
-          <a href="#how-it-works" class="text-text-secondary hover:text-text-primary transition-colors">How it works</a>
           <a href="#pricing" class="text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+          <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors">About</a>
         </div>
-        <a href="#waitlist" class="bg-violet hover:bg-violet-light text-white px-5 py-2 rounded-lg font-medium transition-colors">
+        <a href="#waitlist" class="bg-blue hover:bg-blue-light text-white px-5 py-2 rounded-lg font-medium transition-colors text-sm">
           Join Waitlist
         </a>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20">
-      <div class="max-w-6xl mx-auto px-6 py-20">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            AI agents that<br />
-            <span class="text-violet">just work.</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-text-secondary mb-10 max-w-2xl">
-            Deploy AI agents that handle customer support, sales, and operations across Slack, email, WhatsApp, and more—in minutes, not months.
-          </p>
-          <form id="hero-form" class="flex flex-col sm:flex-row gap-4 max-w-lg">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              required
-              class="flex-1 px-5 py-4 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-violet focus:ring-1 focus:ring-violet transition-colors"
-            />
-            <button 
-              type="submit"
-              class="bg-violet hover:bg-violet-light text-white px-8 py-4 rounded-lg font-semibold transition-colors whitespace-nowrap"
-            >
-              Get Early Access
-            </button>
-          </form>
-          <p class="text-text-muted text-sm mt-4">No spam. We'll notify you when we launch.</p>
+    <!-- ========== 1. HERO ========== -->
+    <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 py-20 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left: Copy + Form -->
+          <div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-tight mb-6">
+              Your AI Assistant,<br />
+              <span class="text-blue">Hosted for You.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-text-secondary mb-8 max-w-lg">
+              A personal AI that remembers you, lives in your messaging apps, and actually does things — email, calendar, research, reminders. Set up in 5 minutes.
+            </p>
+            <form id="hero-form" class="flex flex-col sm:flex-row gap-3 max-w-md">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors"
+              />
+              <button
+                type="submit"
+                class="bg-blue hover:bg-blue-light text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
+              >
+                Get Early Access
+              </button>
+            </form>
+            <p class="text-text-muted text-sm mt-3">No spam. We'll notify you when we launch.</p>
+          </div>
+
+          <!-- Right: Chat Mockup -->
+          <div class="relative">
+            <div class="bg-surface border border-border rounded-2xl overflow-hidden shadow-2xl" style="box-shadow: 0 0 60px rgba(59, 130, 246, 0.1), 0 0 120px rgba(59, 130, 246, 0.05);">
+              <!-- Chat header -->
+              <div class="px-5 py-3 border-b border-border flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-blue/20 flex items-center justify-center">
+                  <span class="text-blue text-sm font-bold">M</span>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Moe</p>
+                  <p class="text-xs text-green-400">Online</p>
+                </div>
+              </div>
+              <!-- Chat messages -->
+              <div id="chat-messages" class="px-5 py-4 space-y-4 min-h-[280px] sm:min-h-[320px]">
+                <!-- Messages injected by JS -->
+              </div>
+              <!-- Channel pills -->
+              <div class="px-5 py-3 border-t border-border flex items-center gap-2 flex-wrap">
+                <span class="text-xs text-text-muted mr-1">Available on</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-hover rounded-full text-xs text-text-secondary">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-hover rounded-full text-xs text-text-secondary">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                  Telegram
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-hover rounded-full text-xs text-text-secondary">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
+                  Discord
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-hover rounded-full text-xs text-text-secondary">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
+                  Slack
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Hero visual accent -->
-        <div class="absolute top-1/2 right-0 w-1/2 h-1/2 bg-gradient-to-l from-violet/20 to-transparent blur-3xl -z-10"></div>
+      </div>
+      <!-- Background glow -->
+      <div class="absolute top-1/3 right-0 w-96 h-96 bg-blue/10 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute bottom-1/4 left-0 w-64 h-64 bg-blue/5 rounded-full blur-3xl -z-10"></div>
+    </section>
+
+    <!-- ========== 2. TRUST BAR ========== -->
+    <section class="py-16 border-y border-border/50">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-text-muted text-sm uppercase tracking-wider mb-8">Built on open-source. Powered by leading AI models.</p>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <span class="text-text-secondary text-lg sm:text-xl font-heading font-semibold opacity-60 hover:opacity-100 transition-opacity">OpenClaw</span>
+          <span class="text-text-secondary text-lg sm:text-xl font-heading font-semibold opacity-60 hover:opacity-100 transition-opacity">Anthropic</span>
+          <span class="text-text-secondary text-lg sm:text-xl font-heading font-semibold opacity-60 hover:opacity-100 transition-opacity">OpenAI</span>
+          <span class="text-text-secondary text-lg sm:text-xl font-heading font-semibold opacity-60 hover:opacity-100 transition-opacity">Google</span>
+        </div>
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ========== 3. THE PROBLEM ========== -->
+    <section class="py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">AI Assistants Are Broken</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-4xl mb-4">🧠</div>
+            <h3 class="text-xl font-semibold font-heading mb-3">No Memory</h3>
+            <p class="text-text-secondary">ChatGPT forgets you every conversation. Your AI should know your preferences, your schedule, your life.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-4xl mb-4">🔌</div>
+            <h3 class="text-xl font-semibold font-heading mb-3">No Integration</h3>
+            <p class="text-text-secondary">Smart but isolated. Can't check your email, manage your calendar, or message you first.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-4xl mb-4">🔒</div>
+            <h3 class="text-xl font-semibold font-heading mb-3">No Autonomy</h3>
+            <p class="text-text-secondary">They wait for you to open an app. A real assistant works in the background, 24/7.</p>
+          </div>
+        </div>
+
+        <p class="text-center text-text-secondary max-w-3xl mx-auto reveal">
+          The DIY alternative? A server, Docker, API keys, DNS, and ongoing maintenance. <span class="text-text-primary font-medium">95% of people who want a persistent AI assistant can't set one up.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 4. THE SOLUTION ========== -->
     <section id="features" class="py-24 bg-surface/30">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Everything you need</h2>
-          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-            Build, deploy, and manage AI agents without writing a single line of code.
-          </p>
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Personal AI, Zero Setup</h2>
         </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Feature 1 -->
-          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
-            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Visual Agent Builder</h3>
-            <p class="text-text-secondary text-lg">
-              Drag-and-drop interface to design your agent's behavior. Define triggers, responses, and workflows visually.
-            </p>
-          </div>
 
-          <!-- Feature 2 -->
-          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
-            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Multi-Channel</h3>
-            <p class="text-text-secondary text-lg">
-              One agent, everywhere. Deploy seamlessly to Slack, Discord, WhatsApp, Email, and custom web widgets.
-            </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">⏰</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Always On</h3>
+            <p class="text-text-secondary text-sm">Runs 24/7, not just when you open an app.</p>
           </div>
-
-          <!-- Feature 3 -->
-          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
-            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Knowledge Base</h3>
-            <p class="text-text-secondary text-lg">
-              Upload docs, FAQs, and training data. Your agent learns your business and answers accurately.
-            </p>
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">💬</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Where You Are</h3>
+            <p class="text-text-secondary text-sm">WhatsApp, Telegram, Discord, Slack — natively.</p>
           </div>
-
-          <!-- Feature 4 -->
-          <div class="bg-surface border border-border rounded-2xl p-8 hover:border-violet/50 transition-colors">
-            <div class="w-14 h-14 bg-violet/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Analytics Dashboard</h3>
-            <p class="text-text-secondary text-lg">
-              Track conversations, response quality, and user satisfaction. Know exactly how your agents perform.
-            </p>
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">⚡</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Does Real Things</h3>
+            <p class="text-text-secondary text-sm">Email, calendar, web search, reminders, research.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">🧠</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Remembers You</h3>
+            <p class="text-text-secondary text-sm">Persistent memory across every conversation.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">🔐</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Your Data</h3>
+            <p class="text-text-secondary text-sm">Isolated instance. Your data stays yours.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 hover:border-blue/50 hover:-translate-y-0.5 transition-all reveal">
+            <div class="text-3xl mb-3">🛠️</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Extensible</h3>
+            <p class="text-text-secondary text-sm">Add skills, connect tools, customize behavior.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- ========== 5. HOW IT WORKS ========== -->
     <section id="how-it-works" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Get started in minutes</h2>
-          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-            No coding required. No consultants needed.
-          </p>
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Up and Running in 5 Minutes</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 md:gap-12">
-          <!-- Step 1 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
-              1
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Create your agent</h3>
-            <p class="text-text-secondary text-lg">
-              Define your agent's personality, upload your knowledge base, and set its capabilities.
-            </p>
+          <div class="text-center reveal">
+            <div class="w-14 h-14 bg-blue rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold font-heading">1</div>
+            <h3 class="text-xl font-semibold font-heading mb-2">Sign Up</h3>
+            <p class="text-text-secondary">Pick your plan and create your account.</p>
           </div>
-
-          <!-- Step 2 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
-              2
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Connect channels</h3>
-            <p class="text-text-secondary text-lg">
-              Link your Slack workspace, Discord server, WhatsApp, or email—all in a few clicks.
-            </p>
+          <div class="text-center reveal">
+            <div class="w-14 h-14 bg-blue rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold font-heading">2</div>
+            <h3 class="text-xl font-semibold font-heading mb-2">Connect Your Channels</h3>
+            <p class="text-text-secondary">Link WhatsApp, Telegram, Discord — wherever you want your AI.</p>
           </div>
-
-          <!-- Step 3 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-violet rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
-              3
-            </div>
-            <h3 class="text-2xl font-semibold mb-3">Go live</h3>
-            <p class="text-text-secondary text-lg">
-              Hit deploy. Your AI agent starts handling conversations instantly. Monitor and refine as you go.
-            </p>
+          <div class="text-center reveal">
+            <div class="w-14 h-14 bg-blue rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold font-heading">3</div>
+            <h3 class="text-xl font-semibold font-heading mb-2">Start Talking</h3>
+            <p class="text-text-secondary">Your AI assistant is live. It learns, remembers, and works for you.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- ========== 6. PRICING ========== -->
     <section id="pricing" class="py-24 bg-surface/30">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple, transparent pricing</h2>
-          <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-            Start free. Scale when you're ready.
-          </p>
+        <div class="text-center mb-4 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Simple, Honest Pricing</h2>
+          <p class="text-text-secondary">All prices in CAD</p>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-6">
-          <!-- Free -->
-          <div class="bg-surface border border-border rounded-2xl p-8">
-            <h3 class="text-xl font-semibold mb-2">Free</h3>
-            <p class="text-text-muted mb-6">Self-hosted</p>
-            <div class="mb-6">
-              <span class="text-4xl font-bold">$0</span>
-              <span class="text-text-muted">/forever</span>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <!-- Self-Hosted -->
+          <div class="bg-surface border border-border rounded-2xl p-7 flex flex-col reveal">
+            <h3 class="text-lg font-semibold font-heading mb-1">Self-Hosted</h3>
+            <p class="text-text-muted text-sm mb-4">Open-source, run it yourself</p>
+            <div class="mb-5">
+              <span class="text-3xl font-bold font-heading">$0</span>
+              <span class="text-text-muted text-sm">/forever</span>
             </div>
-            <ul class="space-y-3 text-text-secondary mb-8">
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Unlimited agents
+            <ul class="space-y-2.5 text-text-secondary text-sm mb-8 flex-1">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Unlimited everything
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Your infrastructure
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                 Community support
               </li>
             </ul>
-            <a href="https://github.com/moes-ai" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
+            <a href="https://github.com/moes-ai" target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 border border-border rounded-lg hover:border-blue/50 transition-colors text-sm font-medium">
               View on GitHub
             </a>
           </div>
 
           <!-- Starter -->
-          <div class="bg-surface border border-border rounded-2xl p-8">
-            <h3 class="text-xl font-semibold mb-2">Starter</h3>
-            <p class="text-text-muted mb-6">For small teams</p>
-            <div class="mb-6">
-              <span class="text-4xl font-bold">$49</span>
-              <span class="text-text-muted">/month</span>
+          <div class="bg-surface border border-border rounded-2xl p-7 flex flex-col reveal">
+            <h3 class="text-lg font-semibold font-heading mb-1">Starter</h3>
+            <p class="text-text-muted text-sm mb-4">Personal essentials</p>
+            <div class="mb-5">
+              <span class="text-3xl font-bold font-heading">$19</span>
+              <span class="text-text-muted text-sm">/mo</span>
             </div>
-            <ul class="space-y-3 text-text-secondary mb-8">
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                3 agents
+            <ul class="space-y-2.5 text-text-secondary text-sm mb-8 flex-1">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Fast AI model (Haiku 3.5)
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                5,000 messages/mo
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                1 messaging channel
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Email support
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Core skills (email, calendar, reminders)
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                50 conversations/day
               </li>
             </ul>
-            <a href="#waitlist" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
+            <a href="#waitlist" class="block text-center py-2.5 border border-border rounded-lg hover:border-blue/50 transition-colors text-sm font-medium">
               Join Waitlist
             </a>
           </div>
 
           <!-- Pro (Popular) -->
-          <div class="bg-surface border-2 border-violet rounded-2xl p-8 relative">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet px-4 py-1 rounded-full text-sm font-medium">
-              Popular
+          <div class="bg-surface border-2 border-blue rounded-2xl p-7 flex flex-col relative reveal">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue px-3 py-0.5 rounded-full text-xs font-semibold">Popular</div>
+            <h3 class="text-lg font-semibold font-heading mb-1">Pro</h3>
+            <p class="text-text-muted text-sm mb-4">Full-featured assistant</p>
+            <div class="mb-5">
+              <span class="text-3xl font-bold font-heading">$49</span>
+              <span class="text-text-muted text-sm">/mo</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Pro</h3>
-            <p class="text-text-muted mb-6">For growing teams</p>
-            <div class="mb-6">
-              <span class="text-4xl font-bold">$149</span>
-              <span class="text-text-muted">/month</span>
-            </div>
-            <ul class="space-y-3 text-text-secondary mb-8">
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                10 agents
+            <ul class="space-y-2.5 text-text-secondary text-sm mb-8 flex-1">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Advanced AI (Sonnet 4.5)
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                25,000 messages/mo
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Unlimited channels
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                All skills + browser
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                200 conversations/day
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                 Priority support
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Advanced analytics
-              </li>
             </ul>
-            <a href="#waitlist" class="block text-center py-3 bg-violet hover:bg-violet-light rounded-lg font-medium transition-colors">
+            <a href="#waitlist" class="block text-center py-2.5 bg-blue hover:bg-blue-light rounded-lg font-medium transition-colors text-sm">
               Join Waitlist
             </a>
           </div>
 
-          <!-- Enterprise -->
-          <div class="bg-surface border border-border rounded-2xl p-8">
-            <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
-            <p class="text-text-muted mb-6">Custom solutions</p>
-            <div class="mb-6">
-              <span class="text-4xl font-bold">Custom</span>
+          <!-- Power -->
+          <div class="bg-surface border border-border rounded-2xl p-7 flex flex-col reveal">
+            <h3 class="text-lg font-semibold font-heading mb-1">Power</h3>
+            <p class="text-text-muted text-sm mb-4">Maximum capability</p>
+            <div class="mb-5">
+              <span class="text-3xl font-bold font-heading">$99</span>
+              <span class="text-text-muted text-sm">/mo</span>
             </div>
-            <ul class="space-y-3 text-text-secondary mb-8">
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Unlimited agents
+            <ul class="space-y-2.5 text-text-secondary text-sm mb-8 flex-1">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Premium models (Sonnet + Opus)
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Unlimited messages
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Everything in Pro
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                Custom skills
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                 Dedicated support
               </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                SLA & compliance
-              </li>
             </ul>
-            <a href="mailto:hello@moes.ai" class="block text-center py-3 border border-border rounded-lg hover:border-violet transition-colors">
-              Contact Sales
+            <a href="#waitlist" class="block text-center py-2.5 border border-border rounded-lg hover:border-blue/50 transition-colors text-sm font-medium">
+              Join Waitlist
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="waitlist" class="py-24">
+    <!-- ========== 7. UNIT ECONOMICS ========== -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-4 reveal">
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading mb-3">Transparent Economics</h2>
+          <p class="text-text-secondary">We keep costs low so you get a premium AI without the premium price.</p>
+        </div>
+
+        <div class="mt-12 reveal">
+          <svg viewBox="0 0 700 320" class="w-full" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background -->
+            <rect width="700" height="320" fill="transparent"/>
+
+            <!-- Grid lines -->
+            <line x1="100" y1="40" x2="100" y2="240" stroke="#1f2937" stroke-width="1"/>
+            <line x1="100" y1="240" x2="620" y2="240" stroke="#1f2937" stroke-width="1"/>
+            <line x1="100" y1="140" x2="620" y2="140" stroke="#1f2937" stroke-width="0.5" stroke-dasharray="4"/>
+            <line x1="100" y1="90" x2="620" y2="90" stroke="#1f2937" stroke-width="0.5" stroke-dasharray="4"/>
+            <line x1="100" y1="190" x2="620" y2="190" stroke="#1f2937" stroke-width="0.5" stroke-dasharray="4"/>
+
+            <!-- Y-axis labels -->
+            <text x="90" y="244" fill="#64748b" font-size="11" text-anchor="end" font-family="Inter, sans-serif">$0</text>
+            <text x="90" y="194" fill="#64748b" font-size="11" text-anchor="end" font-family="Inter, sans-serif">$25</text>
+            <text x="90" y="144" fill="#64748b" font-size="11" text-anchor="end" font-family="Inter, sans-serif">$50</text>
+            <text x="90" y="94" fill="#64748b" font-size="11" text-anchor="end" font-family="Inter, sans-serif">$75</text>
+            <text x="90" y="44" fill="#64748b" font-size="11" text-anchor="end" font-family="Inter, sans-serif">$100</text>
+
+            <!-- Starter Group -->
+            <text x="220" y="270" fill="#94a3b8" font-size="13" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600">Starter $19/mo</text>
+            <!-- Infrastructure -->
+            <rect x="170" y="224" rx="3" ry="3" width="30" height="16" fill="#ef4444" opacity="0.8"/>
+            <!-- API cost -->
+            <rect x="205" y="220" rx="3" ry="3" width="30" height="20" fill="#f59e0b" opacity="0.8"/>
+            <!-- Margin -->
+            <rect x="240" y="220" rx="3" ry="3" width="30" height="20" fill="#22c55e" opacity="0.8"/>
+            <!-- Labels on bars -->
+            <text x="185" y="218" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$4</text>
+            <text x="220" y="214" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$5</text>
+            <text x="255" y="214" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$10</text>
+            <text x="220" y="295" fill="#64748b" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">53% margin</text>
+
+            <!-- Pro Group -->
+            <text x="390" y="270" fill="#94a3b8" font-size="13" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600">Pro $49/mo</text>
+            <!-- Infrastructure -->
+            <rect x="340" y="216" rx="3" ry="3" width="30" height="24" fill="#ef4444" opacity="0.8"/>
+            <!-- API cost -->
+            <rect x="375" y="200" rx="3" ry="3" width="30" height="40" fill="#f59e0b" opacity="0.8"/>
+            <!-- Margin -->
+            <rect x="410" y="194" rx="3" ry="3" width="30" height="46" fill="#22c55e" opacity="0.8"/>
+            <!-- Labels on bars -->
+            <text x="355" y="210" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$6</text>
+            <text x="390" y="194" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$20</text>
+            <text x="425" y="188" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$23</text>
+            <text x="390" y="295" fill="#64748b" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">47% margin</text>
+
+            <!-- Power Group -->
+            <text x="530" y="270" fill="#94a3b8" font-size="13" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600">Power $99/mo</text>
+            <!-- Infrastructure -->
+            <rect x="480" y="216" rx="3" ry="3" width="30" height="24" fill="#ef4444" opacity="0.8"/>
+            <!-- API cost -->
+            <rect x="515" y="160" rx="3" ry="3" width="30" height="80" fill="#f59e0b" opacity="0.8"/>
+            <!-- Margin -->
+            <rect x="550" y="134" rx="3" ry="3" width="30" height="106" fill="#22c55e" opacity="0.8"/>
+            <!-- Labels on bars -->
+            <text x="495" y="210" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$6</text>
+            <text x="530" y="154" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$40</text>
+            <text x="565" y="128" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">$53</text>
+            <text x="530" y="295" fill="#64748b" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">54% margin</text>
+
+            <!-- Legend -->
+            <rect x="180" y="308" width="10" height="10" rx="2" fill="#ef4444" opacity="0.8"/>
+            <text x="195" y="317" fill="#94a3b8" font-size="10" font-family="Inter, sans-serif">Infrastructure</text>
+            <rect x="290" y="308" width="10" height="10" rx="2" fill="#f59e0b" opacity="0.8"/>
+            <text x="305" y="317" fill="#94a3b8" font-size="10" font-family="Inter, sans-serif">API Cost</text>
+            <rect x="380" y="308" width="10" height="10" rx="2" fill="#22c55e" opacity="0.8"/>
+            <text x="395" y="317" fill="#94a3b8" font-size="10" font-family="Inter, sans-serif">Your Margin</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. VISION / ROADMAP ========== -->
+    <section class="py-24 bg-surface/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Where We're Going</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-surface border border-blue/50 rounded-2xl p-7 relative reveal">
+            <div class="inline-block px-2.5 py-0.5 bg-blue/20 text-blue text-xs font-semibold rounded-full mb-4">NOW</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Managed AI Assistant</h3>
+            <p class="text-text-secondary text-sm mb-3">Personal AI hosted for you. WhatsApp, Telegram, Discord — all your channels.</p>
+            <p class="text-text-muted text-xs font-mono">$19–99/mo</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal">
+            <div class="inline-block px-2.5 py-0.5 bg-surface-hover text-text-secondary text-xs font-semibold rounded-full mb-4">COMING</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Rise & Shine App</h3>
+            <p class="text-text-secondary text-sm mb-3">Mobile AI productivity — tasks, habits, journal + AI brain.</p>
+            <p class="text-text-muted text-xs font-mono">$29–49/mo</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal">
+            <div class="inline-block px-2.5 py-0.5 bg-surface-hover text-text-secondary text-xs font-semibold rounded-full mb-4">FUTURE</div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Enterprise</h3>
+            <p class="text-text-secondary text-sm mb-3">AI assistants for teams. SSO, compliance, custom models.</p>
+            <p class="text-text-muted text-xs font-mono">$30–150/seat</p>
+          </div>
+        </div>
+
+        <p class="text-center text-text-muted text-sm mt-8 reveal">Each phase builds on the last. Same infrastructure. Nothing is throwaway.</p>
+      </div>
+    </section>
+
+    <!-- ========== 9. COMPETITIVE POSITIONING ========== -->
+    <section class="py-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading mb-4">How We Compare</h2>
+        </div>
+
+        <div class="bg-surface border border-border rounded-2xl overflow-hidden reveal">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-border">
+                  <th class="text-left py-4 px-5 text-text-muted font-medium">Feature</th>
+                  <th class="py-4 px-4 text-blue font-semibold bg-blue/5">Moe's AI</th>
+                  <th class="py-4 px-4 text-text-secondary font-medium">ChatGPT+</th>
+                  <th class="py-4 px-4 text-text-secondary font-medium">Lindy.ai</th>
+                  <th class="py-4 px-4 text-text-secondary font-medium">Notion AI</th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Always-on agent</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Multi-channel messaging</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">Partial</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Open-source core</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Data sovereignty</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Persistent memory</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr>
+                  <td class="text-left py-3 px-5 text-text-secondary">Price</td>
+                  <td class="py-3 px-4 bg-blue/5 text-blue font-medium">$19–49</td>
+                  <td class="py-3 px-4 text-text-secondary">$20</td>
+                  <td class="py-3 px-4 text-text-secondary">$50–200</td>
+                  <td class="py-3 px-4 text-text-secondary">$10 add-on</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 10. TRACTION ========== -->
+    <section id="about" class="py-24 bg-surface/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Already Running, Already Working</h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div class="text-center reveal">
+            <p class="text-3xl sm:text-4xl font-bold font-heading text-blue counter-value" data-target="6">0</p>
+            <p class="text-lg font-heading text-text-primary">+ months</p>
+            <p class="text-text-muted text-sm mt-1">Running as primary AI assistant daily</p>
+          </div>
+          <div class="text-center reveal">
+            <p class="text-3xl sm:text-4xl font-bold font-heading text-blue counter-value" data-target="129">0</p>
+            <p class="text-lg font-heading text-text-primary">commits</p>
+            <p class="text-text-muted text-sm mt-1">Across 5 projects in 7 weeks</p>
+          </div>
+          <div class="text-center reveal">
+            <p class="text-3xl sm:text-4xl font-bold font-heading text-blue counter-value" data-target="5">0</p>
+            <p class="text-lg font-heading text-text-primary">beta users</p>
+            <p class="text-text-muted text-sm mt-1">Deploying this week</p>
+          </div>
+          <div class="text-center reveal">
+            <p class="text-3xl sm:text-4xl font-bold font-heading text-blue">$4</p>
+            <p class="text-lg font-heading text-text-primary">/mo</p>
+            <p class="text-text-muted text-sm mt-1">Infrastructure cost per user (Hetzner)</p>
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto reveal">
+          <blockquote class="border-l-2 border-blue pl-6 py-2">
+            <p class="text-lg text-text-secondary italic mb-3">"I don't want to build a unicorn. I want to build a profitable business that makes a real product people love."</p>
+            <cite class="text-text-muted text-sm not-italic">— Greg Mousseau, Founder</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 11. MARKET OPPORTUNITY ========== -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading mb-4">Market Opportunity</h2>
+        </div>
+
+        <div class="flex justify-center reveal">
+          <svg viewBox="0 0 500 420" class="w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
+            <!-- TAM circle -->
+            <circle cx="250" cy="200" r="170" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.3"/>
+            <circle cx="250" cy="200" r="170" fill="#3b82f6" opacity="0.05"/>
+
+            <!-- SAM circle -->
+            <circle cx="250" cy="210" r="110" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+            <circle cx="250" cy="210" r="110" fill="#3b82f6" opacity="0.08"/>
+
+            <!-- SOM circle -->
+            <circle cx="250" cy="225" r="50" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.8"/>
+            <circle cx="250" cy="225" r="50" fill="#3b82f6" opacity="0.15"/>
+
+            <!-- TAM label -->
+            <text x="250" y="55" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">TAM</text>
+            <text x="250" y="73" fill="#f1f5f9" font-size="16" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700">$32B</text>
+            <text x="250" y="89" fill="#64748b" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">Intelligent Virtual Assistants (24% CAGR)</text>
+
+            <!-- SAM label -->
+            <text x="250" y="135" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">SAM</text>
+            <text x="250" y="153" fill="#f1f5f9" font-size="16" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700">$2B</text>
+            <text x="250" y="169" fill="#64748b" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">Managed Personal AI</text>
+
+            <!-- SOM label -->
+            <text x="250" y="218" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="Inter, sans-serif">SOM Year 1</text>
+            <text x="250" y="238" fill="#3b82f6" font-size="16" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700">$500K</text>
+
+            <!-- Source -->
+            <text x="250" y="400" fill="#4b5563" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">Source: Grand View Research, internal estimates</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 12. CTA ========== -->
+    <section id="waitlist" class="py-24 bg-surface/30">
       <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to deploy AI agents?</h2>
-        <p class="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">
-          Join the waitlist and be first to know when we launch. Early access members get exclusive benefits.
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-6 reveal">Ready to Meet Your AI?</h2>
+        <p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto reveal">
+          Join the waitlist for early access. First 100 users get founding member pricing.
         </p>
-        <form id="cta-form" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-          <input 
-            type="email" 
-            placeholder="Enter your email" 
+        <form id="cta-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto reveal">
+          <input
+            type="email"
+            placeholder="Enter your email"
             required
-            class="flex-1 px-5 py-4 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-violet focus:ring-1 focus:ring-violet transition-colors"
+            class="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors"
           />
-          <button 
+          <button
             type="submit"
-            class="bg-violet hover:bg-violet-light text-white px-8 py-4 rounded-lg font-semibold transition-colors whitespace-nowrap"
+            class="bg-blue hover:bg-blue-light text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
           >
             Join Waitlist
           </button>
         </form>
-        <p class="text-text-muted text-sm mt-4">No spam, ever. Unsubscribe anytime.</p>
+        <p class="text-text-muted text-sm mt-3 reveal">No spam, ever. Unsubscribe anytime.</p>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== 13. FOOTER ========== -->
     <footer class="border-t border-border py-12">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="/" class="text-2xl font-bold">
-              moes<span class="text-violet">.ai</span>
+            <a href="/" class="text-2xl font-bold font-heading">
+              moes<span class="text-blue">.ai</span>
             </a>
-            <p class="text-text-secondary mt-4">
-              AI agents that just work.
-            </p>
+            <p class="text-text-secondary text-sm mt-3">Your AI assistant, hosted for you.</p>
           </div>
-          
+
           <div>
-            <h4 class="font-semibold mb-4">Product</h4>
-            <ul class="space-y-2 text-text-secondary">
+            <h4 class="font-semibold font-heading mb-4 text-sm">Product</h4>
+            <ul class="space-y-2 text-text-secondary text-sm">
               <li><a href="#features" class="hover:text-text-primary transition-colors">Features</a></li>
               <li><a href="#pricing" class="hover:text-text-primary transition-colors">Pricing</a></li>
               <li><a href="#" class="hover:text-text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" class="hover:text-text-primary transition-colors">Changelog</a></li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 class="font-semibold mb-4">Company</h4>
-            <ul class="space-y-2 text-text-secondary">
-              <li><a href="#" class="hover:text-text-primary transition-colors">About</a></li>
+            <h4 class="font-semibold font-heading mb-4 text-sm">Company</h4>
+            <ul class="space-y-2 text-text-secondary text-sm">
+              <li><a href="#about" class="hover:text-text-primary transition-colors">About</a></li>
               <li><a href="#" class="hover:text-text-primary transition-colors">Blog</a></li>
-              <li><a href="#" class="hover:text-text-primary transition-colors">Careers</a></li>
               <li><a href="mailto:hello@moes.ai" class="hover:text-text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 class="font-semibold mb-4">Legal</h4>
-            <ul class="space-y-2 text-text-secondary">
+            <h4 class="font-semibold font-heading mb-4 text-sm">Legal</h4>
+            <ul class="space-y-2 text-text-secondary text-sm">
               <li><a href="#" class="hover:text-text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="#" class="hover:text-text-primary transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>
-        
-        <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border">
+
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-border gap-4">
           <p class="text-text-muted text-sm">
-            © 2026 Moes.ai. A Canadian company 🇨🇦
+            &copy; 2026 Moes.ai. A Canadian company 🇨🇦
           </p>
-          <div class="flex items-center gap-4 mt-4 md:mt-0">
-            <a href="https://twitter.com/moesai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="Twitter">
+          <div class="flex items-center gap-4">
+            <a href="https://twitter.com/moesai" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="Twitter/X">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://github.com/moes-ai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="GitHub">
+            <a href="https://github.com/moes-ai" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="GitHub">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
             </a>
-            <a href="https://linkedin.com/company/moes-ai" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="LinkedIn">
+            <a href="https://linkedin.com/company/moes-ai" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-text-primary transition-colors" aria-label="LinkedIn">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
           </div>
@@ -396,8 +703,9 @@ import '../styles/global.css';
       </div>
     </footer>
 
+    <!-- ========== SCRIPTS ========== -->
     <script>
-      // Waitlist form handler
+      // ===== Waitlist form handler (Supabase) =====
       const SUPABASE_URL = 'https://xihukvdujmapptnuwkgr.supabase.co';
       const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhpaHVrdmR1am1hcHB0bnV3a2dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc3MjU5NjAsImV4cCI6MjA4MzMwMTk2MH0.9ZIGeo4m1QYH_5pJpXBfqPhXCr9C8ZimJwIEtYBBRyo';
 
@@ -425,7 +733,7 @@ import '../styles/global.css';
 
           if (response.ok || response.status === 409) {
             button.textContent = '✓ You\'re in!';
-            button.classList.remove('bg-violet', 'hover:bg-violet-light');
+            button.classList.remove('bg-blue', 'hover:bg-blue-light');
             button.classList.add('bg-green-600');
             (form.querySelector('input[type="email"]') as HTMLInputElement).disabled = true;
           } else {
@@ -439,7 +747,6 @@ import '../styles/global.css';
         }
       }
 
-      // Handle all waitlist forms
       document.querySelectorAll('#hero-form, #cta-form').forEach(form => {
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
@@ -447,6 +754,112 @@ import '../styles/global.css';
           await submitWaitlist(email, form as HTMLFormElement);
         });
       });
+
+      // ===== Nav scroll effect =====
+      const nav = document.getElementById('main-nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav?.classList.add('nav-scrolled');
+        } else {
+          nav?.classList.remove('nav-scrolled');
+        }
+      });
+
+      // ===== Scroll reveal (Intersection Observer) =====
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // ===== Counter animation =====
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const target = parseInt(el.dataset.target || '0');
+            if (target === 0) return;
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 40));
+            const interval = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(interval);
+              }
+              el.textContent = current.toString();
+            }, 30);
+            counterObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.counter-value[data-target]').forEach(el => counterObserver.observe(el));
+
+      // ===== Chat animation =====
+      const chatMessages = [
+        { sender: 'user', text: 'Check my calendar and reschedule the 3pm meeting to tomorrow' },
+        { sender: 'moe', text: 'Done. Moved your meeting with Sarah to tomorrow at 3pm. I also noticed a conflict with your dentist appointment — want me to move that too?' },
+        { sender: 'user', text: 'Yes, move it to Thursday' },
+        { sender: 'moe', text: '✓ Rescheduled to Thursday 2pm. Both Sarah and Dr. Chen have been notified.' },
+      ];
+
+      function createMessageEl(msg: typeof chatMessages[0]) {
+        const wrapper = document.createElement('div');
+        wrapper.className = `flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} chat-message`;
+
+        const bubble = document.createElement('div');
+        if (msg.sender === 'user') {
+          bubble.className = 'bg-blue/20 text-text-primary rounded-2xl rounded-br-md px-4 py-2.5 max-w-[85%] text-sm';
+        } else {
+          bubble.className = 'bg-surface-hover text-text-primary rounded-2xl rounded-bl-md px-4 py-2.5 max-w-[85%] text-sm';
+        }
+        bubble.textContent = msg.text;
+        wrapper.appendChild(bubble);
+        return wrapper;
+      }
+
+      function createTypingEl() {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'flex justify-start chat-message';
+        wrapper.innerHTML = `<div class="bg-surface-hover rounded-2xl rounded-bl-md px-4 py-3 flex gap-1.5">
+          <span class="w-2 h-2 bg-text-muted rounded-full typing-dot"></span>
+          <span class="w-2 h-2 bg-text-muted rounded-full typing-dot"></span>
+          <span class="w-2 h-2 bg-text-muted rounded-full typing-dot"></span>
+        </div>`;
+        return wrapper;
+      }
+
+      async function runChat() {
+        const container = document.getElementById('chat-messages');
+        if (!container) return;
+
+        for (let i = 0; i < chatMessages.length; i++) {
+          const msg = chatMessages[i];
+
+          if (msg.sender === 'moe') {
+            const typing = createTypingEl();
+            container.appendChild(typing);
+            container.scrollTop = container.scrollHeight;
+            await new Promise(r => setTimeout(r, 1200));
+            container.removeChild(typing);
+          } else {
+            await new Promise(r => setTimeout(r, 600));
+          }
+
+          container.appendChild(createMessageEl(msg));
+          container.scrollTop = container.scrollHeight;
+          await new Promise(r => setTimeout(r, 800));
+        }
+      }
+
+      // Start chat animation after a brief delay
+      setTimeout(runChat, 1000);
     </script>
   </body>
 </html>
