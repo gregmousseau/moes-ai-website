@@ -1,7 +1,5 @@
 {
-  "projectSettings": {
-    "framework": "astro"
-  },
+  "framework": "astro",
   "headers": [
     {
       "source": "/(.*)",
