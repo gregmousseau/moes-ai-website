@@ -9,8 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/node": "^9.5.4",
+    "@astrojs/vercel": "^9.0.4",
+    "@google-cloud/compute": "^6.7.0",
+    "@stripe/stripe-js": "^8.7.0",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.1"
+    "astro": "^5.17.1",
+    "resend": "^6.9.2",
+    "stripe": "^20.3.1",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
