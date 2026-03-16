@@ -698,7 +698,7 @@ import '../styles/global.css';
             body: JSON.stringify({
               email,
               source: 'moes-website',
-              referrer: document.referrer || null
+              metadata: { referrer: document.referrer || null }
             })
           });
 
