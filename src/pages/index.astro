@@ -29,7 +29,8 @@ import '../styles/global.css';
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="text-text-secondary hover:text-text-primary transition-colors">Features</a>
           <a href="#pricing" class="text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
-          <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors">About</a>
+          <a href="#agents" class="text-text-secondary hover:text-text-primary transition-colors">Agents</a>
+          <a href="https://docs.moes.ai" class="text-text-secondary hover:text-text-primary transition-colors">Docs</a>
         </div>
         <a href="#waitlist" class="bg-blue hover:bg-blue-light text-white px-5 py-2 rounded-lg font-medium transition-colors text-sm">
           Join Waitlist
@@ -405,6 +406,77 @@ import '../styles/global.css';
       </div>
     </section>
 
+
+    <!-- ========== AGENT TEMPLATES ========== -->
+    <section id="agents" class="py-24 bg-surface/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-4">Specialized Agents That <span class="text-blue">Work Together</span></h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">Deploy a team of AI agents, each an expert at one thing. They collaborate through observable channels so you always know what's happening.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal hover:border-blue/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-blue/20 flex items-center justify-center mb-4">
+              <span class="text-blue text-lg">S</span>
+            </div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Support Agent</h3>
+            <p class="text-text-secondary text-sm">Monitors your inbox, triages tickets, dispatches to specialists, closes the loop with customers.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal hover:border-blue/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
+              <span class="text-green-400 text-lg">R</span>
+            </div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Research Agent</h3>
+            <p class="text-text-secondary text-sm">Deep web research, competitive analysis, fact-checking. Returns structured reports with sources.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal hover:border-blue/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+              <span class="text-purple-400 text-lg">C</span>
+            </div>
+            <h3 class="text-lg font-semibold font-heading mb-2">Content Agent</h3>
+            <p class="text-text-secondary text-sm">Updates website copy, writes blog posts, commits to GitHub, triggers deployments.</p>
+          </div>
+          <div class="bg-surface border border-border rounded-2xl p-7 reveal hover:border-blue/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4">
+              <span class="text-orange-400 text-lg">Q</span>
+            </div>
+            <h3 class="text-lg font-semibold font-heading mb-2">QA Agent</h3>
+            <p class="text-text-secondary text-sm">Verifies deployments, takes screenshots, checks for regressions. Reports pass/fail with evidence.</p>
+          </div>
+        </div>
+
+        <!-- A2A Pipeline Demo -->
+        <div class="bg-surface border border-border rounded-2xl p-8 sm:p-10 reveal">
+          <h3 class="text-xl font-semibold font-heading mb-3">Agent-to-Agent in Action</h3>
+          <p class="text-text-secondary mb-6">Watch four agents handle a support ticket from email to deployed fix. Every step is observable in Telegram.</p>
+          <div class="grid sm:grid-cols-5 gap-4 text-center text-sm">
+            <div class="bg-surface-hover rounded-xl p-4">
+              <p class="text-blue font-semibold mb-1">Support</p>
+              <p class="text-text-muted text-xs">Email received, triaged</p>
+            </div>
+            <div class="bg-surface-hover rounded-xl p-4">
+              <p class="text-green-400 font-semibold mb-1">Research</p>
+              <p class="text-text-muted text-xs">Claim verified</p>
+            </div>
+            <div class="bg-surface-hover rounded-xl p-4">
+              <p class="text-purple-400 font-semibold mb-1">Content</p>
+              <p class="text-text-muted text-xs">Fix committed</p>
+            </div>
+            <div class="bg-surface-hover rounded-xl p-4">
+              <p class="text-orange-400 font-semibold mb-1">QA</p>
+              <p class="text-text-muted text-xs">Deploy verified</p>
+            </div>
+            <div class="bg-surface-hover rounded-xl p-4">
+              <p class="text-blue font-semibold mb-1">Support</p>
+              <p class="text-text-muted text-xs">Customer notified</p>
+            </div>
+          </div>
+          <p class="text-text-muted text-xs mt-4 text-center">Human-on-the-loop: you watch in real time and can intervene at any step. <a href="https://docs.moes.ai/a2a/how-it-works/" class="text-blue hover:underline">Learn more</a></p>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== 9. COMPETITIVE POSITIONING ========== -->
     <section class="py-24">
       <div class="max-w-5xl mx-auto px-6">
@@ -458,6 +530,13 @@ import '../styles/global.css';
                   <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
                   <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
                   <td class="py-3 px-4"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                </tr>
+                <tr class="border-b border-border/50">
+                  <td class="text-left py-3 px-5 text-text-secondary">Agent-to-Agent (A2A)</td>
+                  <td class="py-3 px-4 bg-blue/5"><span class="text-green-400">✓</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
+                  <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
                   <td class="py-3 px-4"><span class="text-text-muted">✗</span></td>
                 </tr>
                 <tr>
