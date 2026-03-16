@@ -15,7 +15,7 @@ export async function submitWaitlist(email: string): Promise<{ success: boolean;
       body: JSON.stringify({
         email,
         source: 'moes-website',
-        referrer: document.referrer || null
+        metadata: { referrer: document.referrer || null }
       })
     });
 
